@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>who</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport"
+          content="width=device-width,user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <meta http-equiv="x-xss-protection" content="1;mode=block">
+    <!--<link rel="stylesheet" href="css/all.css">-->
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/view.min.js"></script>
+    <link rel="stylesheet" href="js/swiper/swiper.css">
+
+    <style>
+        html, body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-info{
+            top: 50%;
+            position: absolute;
+            padding:0 .7rem;
+            width: 100%;
+            left:50%;
+            -webkit-transform: translate(-50%,-50%);
+            -moz-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+            -o-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+        }
+        .swiper-info img{
+            width: 2.8rem;
+            height: 2.8rem;
+            margin-bottom: .6rem;
+        }
+        .swiper-info h4{
+            height: .8rem;
+            line-height: .45rem;
+            font-size: .36rem;
+            color: #282C2E;
+            text-align: center;
+            margin-bottom: .44rem;
+        }
+        .swiper-info p{
+            opacity: 0.8;
+            font-size: .28rem;
+            color: #31393D;
+            letter-spacing: 0;
+            text-align: center;
+        }
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #86D4FF;
+            /* Center slide text vertically */
+            /*display: -webkit-box;*/
+            /*display: -ms-flexbox;*/
+            /*display: -webkit-flex;*/
+            /*display: flex;*/
+            /*-webkit-box-pack: center;*/
+            /*-ms-flex-pack: center;*/
+            /*-webkit-justify-content: center;*/
+            /*justify-content: center;*/
+            /*-webkit-box-align: center;*/
+            /*-ms-flex-align: center;*/
+            /*-webkit-align-items: center;*/
+            /*align-items: center;*/
+        }
+    </style>
+</head>
+<body>
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="swiper-info">
+                <img src="image/pro1.png" alt="">
+                <h4>Who is China1stop?</h4>
+                <p>China1stop is an instant travel solution platform <br /> for visitors to China, either making a reservation <br />
+                    with a local travel experts beforehand, or <br />almost booking a service at the last minute on <br /> the spot.
+                </p>
+            </div>
+
+        </div>
+        <div class="swiper-slide">
+            <div class="swiper-info">
+                <img src="image/pro2.png" alt="">
+                <h4>Contact A local Travel expert
+                    <br /> in China</h4>
+                <p>China1stop offers Tailor-made tour, Driver  <br /> Guide service (English-speaking driver) and  <br /> local
+                    foreigners’
+                    join-in tours. Contact any of  <br /> the experts, you will get a respond within 12  <br /> working hours.
+                </p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="swiper-info">
+                <img src="image/pro3.png" alt="">
+                <h4>Book the service <br />
+                    and make a payment</h4>
+                <p>You will get 1 to 3 quotes from our Travel <br /> Experts, you can choose the one that matches <br /> your demands
+                    best, then book it with our travel <br /> expert.
+                </p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="swiper-info">
+                <img src="image/pro4.png" alt="">
+                <h4>Payment</h4>
+                <p>The travel expert will send you a link of <br /> payment to China1stop once you book the <br /> service, then you
+                    can pay the full amount of <br /> service cost to China1stop.
+                </p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="swiper-info">
+                <img src="image/pro5.png" alt="">
+                <h4>Sign the final confirmation form
+                </h4>
+                <p>After the payment is done, a formal <br /> confirmation form will be sent to you and all of <br /> your booking
+                    details will be shown on the <br /> confirmation form. Then, just wating for your <br /> exciting travel to happen...
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+<!--&lt;!&ndash;底部&ndash;&gt;-->
+<!--<div class="footer">-->
+
+<!--</div>-->
+<!--</div>-->
+
+<script src="js/swiper/swiper.js"></script>
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    });
+</script>
+</body>
+</html>
