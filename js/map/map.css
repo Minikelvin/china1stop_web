@@ -1,0 +1,16 @@
+/*body{font: 12px/12px '微软雅黑';}*/
+.tooltip{position: relative;width: 246px; height: 193px;border-radius: 5px;}
+.tooltip-content{ position: absolute; left: 0; top: 0; width: 246px; height: 180px; border-radius: 5px;background: #fff;}
+.tc span{float: left;}
+.tc i{float: right; font-style: normal;}
+.tc-title{height: 48px; line-height: 48px; background-color: #67b2f3; color: #fff; padding: 0 15px 0 25px; margin-bottom: 5px; border-radius: 4px 4px 0 0;}
+.tc-title span{font-size: 18px;}
+.tc-title i{font-size: 16px; display: inline-block; width: 50px; text-align: center;}
+.tc-drive-guide{height: 24px; line-height: 24px; color: #848484; padding: 0 15px 0 25px;}
+.tc-drive-guide span{font-size: 16px;}
+.tc-drive-guide i{font-size: 12px;display: inline-block; width: 50px; text-align: center;}
+.tc-link{ text-align: center; margin-top: 12px;}
+.tc-link a{ text-align: center; display: inline-block; height: 32px; line-height: 32px; width: 216px;background-color: #fd6c6f; border-radius: 5px; color: #fff; text-decoration: none;}
+
+.triangle{position: absolute; bottom: 1px; left: 50%; margin-left: -9px; width: 0;height: 0;border-left: 9px solid transparent;border-right: 9px solid transparent;border-top: 13px solid #fff;}
+.dropdown_menu li a{padding:10px 3px;}

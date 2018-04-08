@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport"
+          content="width=device-width,user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <meta http-equiv="x-xss-protection" content="1;mode=block">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="js/calendar/lCalendar.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/view.min.js"></script>
+    <script>
+        $(function () {
+           $('.msg').on('touchstart',function () {
+               var replyMsg=$(this).parent().parent().find('.reply_msg');
+               console.log(replyMsg);
+               if(replyMsg.is(':hidden')){
+                   replyMsg.css({'display':'block'})
+               }else{
+                   replyMsg.css({'display':'none'})
+               }
+           })
+            $('.heart').on('touchstart',function () {
+                var that=$(this);
+               // console.log(that);
+                if(that.hasClass('active')){
+                    that.removeClass('active')
+                }else{
+                    that.addClass('active');
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+<!--公用头部-->
+<div class="header ">
+    <div class="header_common box_h">
+        <div class="common_logo">
+            <img src="image/logo.png" alt="">
+        </div>
+        <div class="common_menu boxflex1">
+
+        </div>
+    </div>
+</div>
+<!--搜索框-->
+<div class="common_search">
+    <div class="common_search_form">
+
+        <div class="home_select_info clearfix">
+            <div class="home_china1_input box_h">
+                <div class="china1_input_left boxflex1">
+                    <input id="dropDown_list" type="text" name="keyword">
+                    <select name="" id="" class="btn_select">
+                        <option value="">English</option>
+                        <option value="">日本语</option>
+                        <option value="">русский</option>
+                        <option value="">Français</option>
+                    </select>
+                    <span class="caret"></span>
+                </div>
+                <button class="btn btn_search" type="submit">Search</button>
+            </div>
+            <div class="common_creat_btn ">
+                <button type="button" class="index_creat_btn">Creat My Trip</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--content-->
+<div class="blog_left">
+    <h3 class="title">Categories</h3>
+    <ul class="blog_ul">
+        <li class="active"><a href="">Looking for friends</a></li>
+        <li><a href="">On the way</a></li>
+        <li><a href="">More Idea of trip</a></li>
+    </ul>
+    <h3 class="title">Archives</h3>
+    <ul class="blog_ul city_ul">
+        <li class="active"><a href="">Beijing</a></li>
+        <li><a href="">Chengdu</a></li>
+        <li><a href="">Xi'an</a></li>
+        <li><a href="">Guilin</a></li>
+        <li><a href="">Suzhou</a></li>
+    </ul>
+    <a href="" class="add_new_blog">My Blog</a>
+    <a href="" class="add_new_post">Post New Topic</a>
+</div>
+
+<div class="blog_list">
+    <div class="blog_item">
+         <div class="blog_i_head">
+             <img src="https://picsum.photos/80/80/?random&1" alt="">
+             <span class="name">Dthrsd Gjxb </span>
+             <span class="time">2017/3/27</span>
+         </div>
+        <p class="blog_txt">Looking for some one share the car with us to Jiuzhaigou </p>
+        <p class="blog_info">Duis luctus orci vel nulla facilisis eleifend. Etiam tristique ipsum at ultrices pretium. Nam egestas condimentum augue a gravida. Fusce …</p>
+        <div class="blog_message">
+            <a href="javascript:;" class="heart">99</a>
+            <a href="javascript:;" class="msg">99</a>
+        </div>
+        <div class="reply_msg">
+            <span class="reply_msg_title">Reply Dthrsd</span>
+            <textarea name="" id=""></textarea>
+            <div class="reply_btn">
+                <a href="javascript:;" class="cancel_btn">Cancel</a>
+                <a href="javascript:;" class="ok_btn">OK</a>
+            </div>
+        </div>
+    </div>
+    <div class="blog_item">
+        <div class="blog_i_head">
+            <img src="https://picsum.photos/80/80/?random&1" alt="">
+            <span class="name">Dthrsd Gjxb </span>
+            <span class="time">2017/3/27</span>
+        </div>
+        <p class="blog_txt">Looking for some one share the car with us to Jiuzhaigou </p>
+        <p class="blog_info">Duis luctus orci vel nulla facilisis eleifend. Etiam tristique ipsum at ultrices pretium. Nam egestas condimentum augue a gravida. Fusce …</p>
+        <div class="blog_message">
+            <a href="javascript:;" class="heart">99</a>
+            <a href="javascript:;" class="msg">99</a>
+        </div>
+        <div class="reply_msg">
+            <span class="reply_msg_title">Reply Dthrsd</span>
+            <textarea name="" id=""></textarea>
+            <div class="reply_btn">
+                <a href="javascript:;" class="cancel_btn">Cancel</a>
+                <a href="javascript:;" class="ok_btn">OK</a>
+            </div>
+        </div>
+    </div>
+    <div class="blog_item">
+        <div class="blog_i_head">
+            <img src="https://picsum.photos/80/80/?random&1" alt="">
+            <span class="name">Dthrsd Gjxb </span>
+            <span class="time">2017/3/27</span>
+        </div>
+        <p class="blog_txt">Looking for some one share the car with us to Jiuzhaigou </p>
+        <p class="blog_info">Duis luctus orci vel nulla facilisis eleifend. Etiam tristique ipsum at ultrices pretium. Nam egestas condimentum augue a gravida. Fusce …</p>
+        <div class="blog_message">
+            <a href="javascript:;" class="heart">99</a>
+            <a href="javascript:;" class="msg">99</a>
+        </div>
+        <div class="reply_msg">
+            <span class="reply_msg_title">Reply Dthrsd</span>
+            <textarea name="" id=""></textarea>
+            <div class="reply_btn">
+                <a href="javascript:;" class="cancel_btn">Cancel</a>
+                <a href="javascript:;" class="ok_btn">OK</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--footer-->
+<div class="footer">
+    <div class="footer_box">
+        <p class="txt">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+            classical Latin literature from 45 BC, making it over 2000 years old.</p>
+        <div class="footer_list">
+            <div class="footer_li">
+                <h3>Payment</h3>
+                <a href="javascript:;">Creidt Card</a>
+                <a href="javascript:;">Paypal</a>
+                <a href="javascript:;">Wire Transfer </a>
+                <a href="javascript:;">Wechat </a>
+            </div>
+            <div class="footer_li">
+                <h3>Support</h3>
+                <a href="javascript:;">Contct</a>
+                <a href="javascript:;">Faq</a>
+                <a href="javascript:;">Privacy policy </a>
+                <a href="javascript:;">Terms of Use </a>
+            </div>
+            <div class="footer_li">
+                <h3>Be Our Supplier</h3>
+                <a href="javascript:;">Supplier Administration</a>
+                <a class="join_us" href="javascript:;">Join Us</a>
+            </div>
+        </div>
+    </div>
+    <p class="copyright">2017 ©china1stop.com All rights reserved. Version v5.57 川ICP备12003524号 川公网安备11010502023470
+        川ICP证140673号</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport"
+          content="width=device-width,user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <meta http-equiv="x-xss-protection" content="1;mode=block">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="js/swiper/swiper.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/view.min.js"></script>
+    <script src="js/swiper/swiper.js"></script>
+    <script src="js/common.js"></script>
+    <style>
+
+    </style>
+</head>
+<body>
+<div class="index_main">
+    <!--swiper轮播-->
+    <div class="swiper_mask"></div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url(https://picsum.photos/750/727/?random&1)"></div>
+            <div class="swiper-slide" style="background-image:url(https://picsum.photos/750/727/?random&2)"></div>
+            <div class="swiper-slide" style="background-image:url(https://picsum.photos/750/727/?random&3)"></div>
+            <div class="swiper-slide" style="background-image:url(https://picsum.photos/750/727/?random&4)"></div>
+        </div>
+    </div>
+    <!--轮播结束-->
+    <div class="index_header">
+        <div class="index_head box_h">
+            <div class="logo boxflex1">
+                <img src="image/index_logo.png" alt="">
+            </div>
+            <div class="go_href boxflex1">
+                <a href="./viewLogin.html">Login</a>
+                <a href="./viewRegister.html">Register</a>
+            </div>
+
+        </div>
+        <div class="index_text_img">
+            <img src="image/flexbil1.png" alt="">
+            <img src="image/start.png" alt="">
+        </div>
+        <div class="home_list">
+            <div class="home_li who_li">
+                <a href="./viewWho.html" class="who">Who&amp;How</a>
+            </div>
+            <div class="home_li city_li">
+                <a href="" class="city">All City</a>
+            </div>
+            <div class="home_li blog_li">
+                <a href="" class="blog">Blog</a>
+            </div>
+        </div>
+        <div class="home_select">
+            <ul class="home_select_tab clearfix">
+                <li class="active" value="1">Tour Tailor</li>
+                <li value="2">Driver Guide</li>
+                <li value="3">Join In Tour</li>
+            </ul>
+            <form action="tourlist" method="get">
+                <div class="home_select_info clearfix">
+                    <div class="home_china1_input box_h">
+                        <div class="china1_input_left boxflex1">
+                            <input id="dropDown_list" readonly="readonly" type="text" name="keyword">
+                            <select name="" id="" class="btn_select">
+                                <option value="">English</option>
+                                <option value="">日本语</option>
+                                <option value="">русский</option>
+                                <option value="">Français</option>
+                            </select>
+                            <span class="caret"></span>
+                        </div>
+
+
+                        <button class="btn btn_search" type="submit">Search</button>
+                    </div>
+                    <!--新增  下拉搜索-->
+                    <div class="dropDown_search">
+                        <div class="dropDown_list">
+                            <div class="list_title tit_state1">label</div>
+                            <div class="dropDown_ul">
+                                <div class="dropDown_li">Coalhouse Fort</div>
+                                <div class="dropDown_li">Essex</div>
+                                <div class="dropDown_li">Coalhouse Fort</div>
+                            </div>
+                        </div>
+                        <div class="dropDown_list">
+                            <div class="list_title tit_state2">labe2</div>
+                            <div class="dropDown_ul">
+                                <div class="dropDown_li">Coalhouse Fort</div>
+                                <div class="dropDown_li">Essex</div>
+                                <div class="dropDown_li">Coalhouse Fort</div>
+                            </div>
+                        </div>
+                        <div class="dropDown_list">
+                            <div class="list_title tit_state3">label</div>
+                            <div class="dropDown_ul">
+                                <div class="dropDown_li">Coalhouse Fort</div>
+                                <div class="dropDown_li">Essex</div>
+                                <div class="dropDown_li">Coalhouse Fort</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="common_creat_btn ">
+                        <button type="button" class="index_creat_btn">Creat My Trip</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</div>
+<div class="home_content">
+    <div class="home_sliding">
+        <div class="home_c_title">
+            <p>Hot City</p>
+            <a href="" class="more">view more</a>
+        </div>
+        <div class="home_c_list">
+            <ul class="clearfix">
+
+                <li>
+                    <a href="">
+                        <div class="li_img">
+                            <img src="https://picsum.photos/271/271/?random&6" alt="Chengdu">
+                        </div>
+                        <div class="li_txt">
+                            <p class="p_name">Chengdu</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li><a href="">
+                    <div class="li_img">
+                        <img src="https://picsum.photos/271/271/?random&7" alt="Beijing">
+                    </div>
+                    <div class="li_txt">
+                        <p class="p_name">Beijing</p>
+                    </div>
+                </a>
+                </li>
+
+                <li><a href="">
+                    <div class="li_img">
+                        <img src="https://picsum.photos/271/271/?random&8" alt="Xi An">
+
+                    </div>
+                    <div class="li_txt">
+                        <p class="p_name">Xi An</p>
+                    </div>
+                </a>
+                </li>
+
+                <li><a href="">
+                    <div class="li_img">
+                        <img src="https://picsum.photos/271/271/?random&9" alt="Shanghai">
+
+                    </div>
+                    <div class="li_txt">
+                        <p class="p_name">Shanghai</p>
+                    </div>
+                </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="home_sliding">
+        <div class="home_c_title">
+            <p>Recommended Travel Experts</p>
+            <a href="" class="more">view more</a>
+        </div>
+        <div class="home_c_list">
+            <ul class="clearfix">
+
+                <li>
+                    <a href="">
+                        <div class="li_img">
+                            <img src="https://picsum.photos/271/271/?random&6" alt="Chengdu">
+                        </div>
+                        <div class="li_txt">
+                            <p class="p_name">Scott.Chen</p>
+                            <p class="adress">Chengdu</p>
+                            <span><i>115</i>view</span>
+                        </div>
+                    </a>
+                </li>
+
+                <li><a href="">
+                    <div class="li_img">
+                        <img src="https://picsum.photos/271/271/?random&7" alt="Beijing">
+                    </div>
+                    <div class="li_txt">
+                        <p class="p_name">Charles yang.</p>
+                        <p class="adress">Chengdu</p>
+                        <span><i>246</i>view</span>
+                    </div>
+                </a>
+                </li>
+
+                <li><a href="">
+                    <div class="li_img">
+                        <img src="https://picsum.photos/271/271/?random&8" alt="Xi An">
+
+                    </div>
+                    <div class="li_txt">
+                        <p class="p_name">Fred.Chen</p>
+                        <p class="adress">Chengdu</p>
+                        <span><i>41</i>view</span>
+                    </div>
+                </a>
+                </li>
+
+                <li><a href="">
+                    <div class="li_img">
+                        <img src="https://picsum.photos/271/271/?random&9" alt="Shanghai">
+
+                    </div>
+                    <div class="li_txt">
+                        <p class="p_name">Alex.Tang Chengdu</p>
+                        <p class="adress">Chengdu</p>
+                        <span><i>29</i>view</span>
+                    </div>
+                </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="home_sliding">
+        <div class="home_c_title">
+            <p>Popular on China1stop</p>
+            <a href="" class="more">view more</a>
+        </div>
+        <div class="home_c_list">
+            <ul class="clearfix">
+
+                <li>
+                    <a href="">
+                        <div class="li_img">
+                            <img src="https://picsum.photos/271/271/?random&6" alt="Chengdu">
+                        </div>
+                        <div class="li_txt">
+                            <p class="p_name">Scott.Chen</p>
+                            <p class="adress">Chengdu</p>
+                            <span><i>115</i>view</span>
+                        </div>
+                    </a>
+                </li>
+
+                <li><a href="">
+                    <div class="li_img">
+                        <img src="https://picsum.photos/271/271/?random&7" alt="Beijing">
+                    </div>
+                    <div class="li_txt">
+                        <p class="p_name">Charles yang.</p>
+                        <p class="adress">Chengdu</p>
+                        <span><i>246</i>view</span>
+                    </div>
+                </a>
+                </li>
+
+                <li><a href="">
+                    <div class="li_img">
+                        <img src="https://picsum.photos/271/271/?random&8" alt="Xi An">
+
+                    </div>
+                    <div class="li_txt">
+                        <p class="p_name">Fred.Chen</p>
+                        <p class="adress">Chengdu</p>
+                        <span><i>41</i>view</span>
+                    </div>
+                </a>
+                </li>
+
+                <li><a href="">
+                    <div class="li_img">
+                        <img src="https://picsum.photos/271/271/?random&9" alt="Shanghai">
+
+                    </div>
+                    <div class="li_txt">
+                        <p class="p_name">Alex.Tang Chengdu</p>
+                        <p class="adress">Chengdu</p>
+                        <span><i>29</i>view</span>
+                    </div>
+                </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+<!--footer-->
+<div class="footer">
+    <div class="footer_box">
+        <p class="txt">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+            classical Latin literature from 45 BC, making it over 2000 years old.</p>
+        <div class="footer_list">
+            <div class="footer_li">
+                <h3>Payment</h3>
+                <a href="javascript:;">Creidt Card</a>
+                <a href="javascript:;">Paypal</a>
+                <a href="javascript:;">Wire Transfer </a>
+                <a href="javascript:;">Wechat </a>
+            </div>
+            <div class="footer_li">
+                <h3>Support</h3>
+                <a href="javascript:;">Contct</a>
+                <a href="javascript:;">Faq</a>
+                <a href="javascript:;">Privacy policy </a>
+                <a href="javascript:;">Terms of Use </a>
+            </div>
+            <div class="footer_li">
+                <h3>Be Our Supplier</h3>
+                <a href="javascript:;">Supplier Administration</a>
+                <a class="join_us" href="javascript:;">Join Us</a>
+            </div>
+        </div>
+    </div>
+    <p class="copyright">2017 ©china1stop.com All rights reserved. Version v5.57 川ICP备12003524号 川公网安备11010502023470
+        川ICP证140673号</p>
+</div>
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        autoplay: true,
+        loop: true
+    });
+</script>
+
+</body>
+</html>

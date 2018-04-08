@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CreateTrip</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport"
+          content="width=device-width,user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <meta http-equiv="x-xss-protection" content="1;mode=block">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="js/calendar/lCalendar.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/view.min.js"></script>
+    <script src="js/calendar/lCalendar.js"></script>
+</head>
+<body>
+<!--公用头部-->
+<div class="header ">
+    <div class="header_common box_h">
+        <div class="common_logo">
+            <img src="image/logo.png" alt="">
+        </div>
+        <div class="common_menu boxflex1">
+
+        </div>
+    </div>
+</div>
+<!--搜索框-->
+<div class="common_search">
+    <div class="common_search_form">
+
+        <div class="home_select_info clearfix">
+            <div class="home_china1_input box_h">
+                <div class="china1_input_left boxflex1">
+                    <input id="dropDown_list" type="text" name="keyword">
+                    <select name="" id="" class="btn_select">
+                        <option value="">English</option>
+                        <option value="">日本语</option>
+                        <option value="">русский</option>
+                        <option value="">Français</option>
+                    </select>
+                    <span class="caret"></span>
+                </div>
+                <button class="btn btn_search" type="submit">Search</button>
+            </div>
+            <div class="common_creat_btn ">
+                <button type="button" class="index_creat_btn">Creat My Trip</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--create_list-->
+<div class="create_from">
+    <h3 class="title"> Tell us your travel plan, we are ready to help you discover China in your way</h3>
+    <div class="create_list">
+        <p>1. Whom are you travelling with? <em>*</em></p>
+        <div class="create_control">
+            <label for="solo" class="demo--label">
+                <input class="demo--radio" id="solo" type="radio" name="solo">
+                <span class="demo--radioInput"></span>Solo
+            </label>
+            <label for="two" class="demo--label">
+                <input class="demo--radio" id="two" type="radio" name="solo">
+                <span class="demo--radioInput"></span>Two people
+            </label>
+            <label for="family" class="demo--label">
+                <input class="demo--radio" id="family" type="radio" name="solo">
+                <span class="demo--radioInput"></span>Family
+            </label>
+            <label for="group" class="demo--label">
+                <input class="demo--radio" id="group" type="radio" name="solo">
+                <span class="demo--radioInput"></span>Group
+            </label>
+
+        </div>
+    </div>
+    <div class="create_list">
+        <p> 2. Age Range</p>
+        <div class="create_control">
+            <label for="awesome12" class="demo--label">
+                <input type="checkbox" class="mgc mgc-success" id="awesome12"> ＜12
+            </label>
+            <label for="awesome13" class="demo--label">
+                <input type="checkbox" class="mgc mgc-success" id="awesome13"> ＜13-18
+            </label>
+            <label for="awesome19" class="demo--label">
+                <input type="checkbox" class="mgc mgc-success" id="awesome19"> ＜19-25
+            </label>
+            <label for="awesome26" class="demo--label">
+                <input type="checkbox" class="mgc mgc-success" id="awesome26"> ＜26-44
+            </label>
+            <label for="awesome45" class="demo--label">
+                <input type="checkbox" class="mgc mgc-success" id="awesome45"> ＜45-64
+            </label>
+            <label for="awesome65" class="demo--label">
+                <input type="checkbox" class="mgc mgc-success" id="awesome65"> ＜65+
+            </label>
+
+        </div>
+    </div>
+    <div class="create_list">
+        <p> 3. Date of Arrival (approx.) <em>*</em></p>
+        <div class="create_control">
+            <h4>arrived</h4>
+            <input class="choose_date" id="arrived" type="text" readonly="readonly" name="input_date" placeholder="" data-lcalendar="2011-01-1,2019-12-31" />
+        </div>
+        <div class="create_control">
+            <h4>leaved</h4>
+            <input class="choose_date" id="leaved" type="text" readonly="readonly" name="input_date" placeholder="" data-lcalendar="2011-01-1,2020-12-31" />
+        </div>
+    </div>
+    <div class="create_list">
+        <p> 4. Hotel Style <em>*</em></p>
+        <div class="create_control">
+            <label class="demo--label">
+                <input class="demo--radio" type="radio" name="demo-radio">
+                <span class="demo--radioInput"></span> Luxury 5 Star
+            </label>
+            <label class="demo--label">
+                <input class="demo--radio" type="radio" name="demo-radio">
+                <span class="demo--radioInput"></span>Comfortable4Star
+            </label>
+            <label class="demo--label">
+                <input class="demo--radio" type="radio" name="demo-radio">
+                <span class="demo--radioInput"></span>Economic 3 Star
+
+            </label>
+            <label class="demo--label">
+                <input class="demo--radio" type="radio" name="demo-radio">
+                <span class="demo--radioInput"></span>Self Booking
+            </label>
+
+        </div>
+    </div>
+    <div class="create_list">
+        <p> 5. Guide  Service</p>
+        <div class="create_control">
+            <label class="demo--label">
+                <input class="demo--radio" type="radio" name="service">
+                <span class="demo--radioInput"></span> Every Day Guided
+            </label>
+            <label class="demo--label">
+                <input class="demo--radio" type="radio" name="service">
+                <span class="demo--radioInput"></span>Most Days Guided
+            </label>
+            <label class="demo--label">
+                <input class="demo--radio" type="radio" name="service">
+                <span class="demo--radioInput"></span>Most Days Guided
+
+            </label>
+        </div>
+    </div>
+    <div class="create_list">
+        <p> 6. What's your ideal trip? <em>*</em></p>
+        <div class="create_control">
+            <label for="trip1" class="demo--label">
+                <input type="checkbox" class="mgc mgc-success" id="trip1"> Beijing
+            </label>
+            <label for="trip2" class="demo--label">
+                <input type="checkbox" class="mgc mgc-success" id="trip2"> Shanghai
+            </label>
+            <label for="trip3" class="demo--label">
+                <input type="checkbox" class="mgc mgc-success" id="trip3"> Xi'an
+            </label>
+            <label for="trip4" class="demo--label">
+                <input type="checkbox" class="mgc mgc-success" id="trip4"> Guilin/Yangshuo
+            </label>
+            <label for="trip5" class="demo--label">
+                <input type="checkbox" class="mgc mgc-success" id="trip5"> Chengdu
+            </label>
+            <label for="trip6" class="demo--label">
+                <input type="checkbox" class="mgc mgc-success" id="trip6"> Guangzhou
+            </label>
+            <label for="trip7" class="demo--label">
+                <input type="checkbox" class="mgc mgc-success" id="trip7"> Hangzhou
+            </label>
+        </div>
+    </div>
+    <div class="create_list list7">
+        <p>7. What type of tour do you prefer?</p>
+        <div class="create_control">
+            <label class="demo--label">
+                <input class="demo--radio" type="radio" name="prefer">
+                <span class="demo--radioInput"></span> Full package Tailor-made
+            </label>
+            <label class="demo--label">
+                <input class="demo--radio" type="radio" name="prefer">
+                <span class="demo--radioInput"></span>Driver Guide
+            </label>
+            <label class="demo--label">
+                <input class="demo--radio" type="radio" name="prefer">
+                <span class="demo--radioInput"></span>Local Join-in
+
+            </label>
+        </div>
+    </div>
+    <div class="create_list">
+        <p>8. Notes</p>
+        <div class="create_control">
+            <textarea name="" id="" placeholder="Tell something else to us"></textarea>
+        </div>
+    </div>
+    <div class="create_list list9">
+        <p>9. Contact Details <em>*</em></p>
+        <div class="create_control">
+           <p>Full name</p>
+            <input type="text">
+        </div>
+        <div class="create_control">
+            <p>E-mail</p>
+            <input type="text">
+        </div>
+        <div class="create_control">
+            <p>Nationality</p>
+            <input type="text">
+        </div>
+        <div class="create_control">
+            <p>Phone Number</p>
+            <input type="text">
+        </div>
+    </div>
+</div>
+<!--footer-->
+<div class="footer">
+    <div class="footer_box">
+        <p class="txt">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+            classical Latin literature from 45 BC, making it over 2000 years old.</p>
+        <div class="footer_list">
+            <div class="footer_li">
+                <h3>Payment</h3>
+                <a href="javascript:;">Creidt Card</a>
+                <a href="javascript:;">Paypal</a>
+                <a href="javascript:;">Wire Transfer </a>
+                <a href="javascript:;">Wechat </a>
+            </div>
+            <div class="footer_li">
+                <h3>Support</h3>
+                <a href="javascript:;">Contct</a>
+                <a href="javascript:;">Faq</a>
+                <a href="javascript:;">Privacy policy </a>
+                <a href="javascript:;">Terms of Use </a>
+            </div>
+            <div class="footer_li">
+                <h3>Be Our Supplier</h3>
+                <a href="javascript:;">Supplier Administration</a>
+                <a class="join_us" href="javascript:;">Join Us</a>
+            </div>
+        </div>
+    </div>
+    <p class="copyright">2017 ©china1stop.com All rights reserved. Version v5.57 川ICP备12003524号 川公网安备11010502023470
+        川ICP证140673号</p>
+</div>
+<script>
+    var calendar = new lCalendar();
+    calendar.init({
+        'trigger': '#arrived',
+        'type': 'date'
+    });
+    var calendar = new lCalendar();
+    calendar.init({
+        'trigger': '#leaved',
+        'type': 'date'
+    });
+</script>
+</body>
+</html>

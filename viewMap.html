@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <meta http-equiv="x-xss-protection" content="1;mode=block">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="js/map/map.css">
+    <script src="js/map/echarts.min.js"></script>
+    <script src="js/map/china.js"></script>
+    <script src="js/view.min.js"></script>
+</head>
+<body>
+<!--公用头部-->
+<div class="header ">
+    <div class="header_common box_h">
+        <div class="common_logo">
+            <img src="image/logo.png" alt="">
+        </div>
+        <div class="common_menu boxflex1">
+
+        </div>
+    </div>
+</div>
+<!--搜索框-->
+<div class="common_search">
+    <div class="common_search_form">
+
+        <div class="home_select_info clearfix">
+            <div class="home_china1_input box_h">
+                <div class="china1_input_left boxflex1">
+                    <input id="dropDown_list" type="text" name="keyword">
+                    <select name="" id="" class="btn_select">
+                        <option value="">English</option>
+                        <option value="">日本语</option>
+                        <option value="">русский</option>
+                        <option value="">Français</option>
+                    </select>
+                    <span class="caret"></span>
+                </div>
+                <button class="btn btn_search" type="submit">Search</button>
+            </div>
+            <div class="common_creat_btn ">
+                <button type="button" class="index_creat_btn">Creat My Trip</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--map-->
+<div class="china1_main">
+    <div class="map_main">
+        <div class="container">
+            <div id="main" style="width: 100%;height:100%; min-height: 800px;"></div>
+            <script type="text/javascript">
+                // 基于准备好的dom，初始化echarts实例
+                var myChart = echarts.init(document.getElementById('main'));
+
+                // 指定图表的配置项和数据
+                var data = [
+                    {name: '海门', value: [100,237,6,6,6,'https://www.baidu.com','#000']},
+                    {name: '成都', value: [100,237,7,7,7,'https://www.baidu.com', '#f00f00']},
+                    {name: '鄂尔多斯', value: [100,111,5,5,5,'https://www.baidu.com', '#9D71C1']}
+
+                ];
+                var geoCoordMap = {
+                    '海门':[121.15,31.89],
+                    '鄂尔多斯':[109.781327,39.608266],
+                    '成都':[104.071791,30.668516]
+
+                };
+
+                var convertData = function (data) {
+                    var res = [];
+                    for (var i = 0; i < data.length; i++) {
+                        var geoCoord = geoCoordMap[data[i].name];
+                        if (geoCoord) {
+                            res.push({
+                                name: data[i].name,
+                                value: geoCoord.concat(data[i].value)
+                            });
+                        }
+                    }
+                    return res;
+                };
+
+                option = {
+                    backgroundColor: '#66B2F3',
+                    title: {
+                        text: '',
+                        left: 'center',
+                        textStyle: {
+                            color: '#fff'
+                        }
+                    },
+                    tooltip : {
+                        trigger: 'item',
+                        position: 'top',
+                        formatter: function (params,ticket,callback) {
+                            var res = '<div class="tooltip"><div class="tooltip-content"><div class="tc tc-title"><span>'+params.name+'</span><i>'+params.value[3]+'</i></div><div class="tc tc-drive-guide"><span>Drive Guide</span><i>'+params.value[4]+'</i></div><div class="tc tc-drive-guide"><span>Drive Guide</span><i>'+params.value[5]+'</i></div><div class="tc tc-drive-guide"><span>Drive Guide</span><i>'+params.value[6]+'</i></div><div class="tc-link"><a href="'+params.value[7]+'" class="tc-type-thing">Type thing</a></div></div><div class="triangle"></div></div>';
+
+                            return res;
+                        },
+                        backgroundColor:'rgba(0,0,0,0)',
+                        alwaysShowContent: true
+                    },
+                    geo: {//地图设置
+                        map: 'china',
+                        label: {
+                            emphasis: {
+                                show: false
+                            }
+                        },
+                        show: true,
+                        center: [108.665331,32.45218],//中心点坐标
+                        roam: true,
+                        zoom:1.8,//初始地图缩放级别
+                        itemStyle: {
+                            normal: {//未选中状态
+                                areaColor: '#fff',
+                                borderColor: '#111'
+                            },
+                            emphasis: {//选中状态
+                                areaColor: '#F1F5F6'
+                            }
+                        }
+                    },
+                    series : [
+                        {
+                            name: 'Drive Guide',
+                            type: 'effectScatter',
+                            coordinateSystem: 'geo',
+                            data: convertData(data),
+                            symbolSize: function (val) {
+                                return val[2] / 10;
+                            },
+                            label: {
+                                normal: {
+                                    formatter: '{b}',
+                                    position: [-6, -25],
+                                    show: true
+                                },
+                                emphasis: {
+                                    show: true
+                                }
+                            },
+                            itemStyle: {
+                                normal: {
+                                    color: function (params) {
+                                        var res = params.value[8];
+
+                                        return res;
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                };
+
+                // 使用刚指定的配置项和数据显示图表。
+                myChart.setOption(option);
+            </script>
+
+        </div>
+    </div>
+
+</div>
+<!--footer-->
+<div class="footer">
+    <div class="footer_box">
+        <p class="txt">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+            classical Latin literature from 45 BC, making it over 2000 years old.</p>
+        <div class="footer_list">
+            <div class="footer_li">
+                <h3>Payment</h3>
+                <a href="javascript:;">Creidt Card</a>
+                <a href="javascript:;">Paypal</a>
+                <a href="javascript:;">Wire Transfer </a>
+                <a href="javascript:;">Wechat </a>
+            </div>
+            <div class="footer_li">
+                <h3>Support</h3>
+                <a href="javascript:;">Contct</a>
+                <a href="javascript:;">Faq</a>
+                <a href="javascript:;">Privacy policy </a>
+                <a href="javascript:;">Terms of Use </a>
+            </div>
+            <div class="footer_li">
+                <h3>Be Our Supplier</h3>
+                <a href="javascript:;">Supplier Administration</a>
+                <a class="join_us" href="javascript:;">Join Us</a>
+            </div>
+        </div>
+    </div>
+    <p class="copyright">2017 ©china1stop.com All rights reserved. Version v5.57 川ICP备12003524号 川公网安备11010502023470
+        川ICP证140673号</p>
+</div>
+</body>
+</html>
