@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>caseDetail</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport"
+          content="width=device-width,user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <meta http-equiv="x-xss-protection" content="1;mode=block">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="js/calendar/default.css">
+    <link rel="stylesheet" href="js/calendar/default.date.css">
+    <link rel="stylesheet" href="js/swiper/swiper.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/view.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/calendar/picker.js"></script>
+    <script src="js/calendar/picker.date.js"></script>
+    <script src="js/swiper/swiper.js"></script>
+    <style>
+        .case_i_msg_list span{
+            height: .64rem;
+            line-height: .64rem;
+           padding:0 .2rem;
+        }
+        .case_i_msg_list span:first-child{
+            padding-left: 0;
+
+        }
+        .case_i_msg_list{
+            margin-bottom: .2rem;
+        }
+        .datepicker{
+            height: .64rem;
+            text-align: center;
+            border: 1px solid #D2DADE;
+            display: block;
+            -webkit-appearance: none;
+            /*border-radius: 4px 0 0 4px;*/
+        }
+        .swiper-container {
+            width: 100%;
+            height: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .swiper-slide {
+            background-size: cover;
+            background-position: center;
+        }
+        .gallery-top {
+            height: 4.61rem;
+            width: 100%;
+        }
+        .gallery-thumbs {
+            height:1.38rem;
+            box-sizing: border-box;
+            padding: 10px 0;
+        }
+        .gallery-thumbs .swiper-slide {
+            width: 2.05rem;
+            height: 100%;
+            opacity: 0.4;
+            border-radius: 4px;
+        }
+        .gallery-thumbs .swiper-slide-active {
+            opacity: 1;
+        }
+
+    </style>
+    <script>
+        $(function () {
+            $('.datepicker').pickadate({
+                format: 'yyyy-mm-dd',
+                formatSubmit: 'yyyy-mm-dd'
+            });
+        })
+    </script>
+</head>
+<body>
+<!--公用头部-->
+<div class="header ">
+    <div class="header_common box_h">
+        <div class="common_logo">
+            <img src="image/logo.png" alt="">
+        </div>
+        <div class="common_menu boxflex1">
+
+        </div>
+    </div>
+</div>
+<!--搜索框-->
+<div class="common_search">
+    <div class="common_search_form">
+
+        <div class="home_select_info clearfix">
+            <div class="home_china1_input box_h">
+                <div class="china1_input_left boxflex1">
+                    <input id="dropDown_list" type="text" name="keyword">
+                    <select name="" id="" class="btn_select">
+                        <option value="">English</option>
+                        <option value="">日本语</option>
+                        <option value="">русский</option>
+                        <option value="">Français</option>
+                    </select>
+                    <span class="caret"></span>
+                </div>
+                <button class="btn btn_search" type="submit">Search</button>
+            </div>
+            <div class="common_creat_btn ">
+                <button type="button" class="index_creat_btn">Creat My Trip</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--content-->
+<div class="case_main">
+    <div class="case_swiper">
+        <!-- Swiper -->
+        <div class="swiper-container gallery-top" dir="rtl">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image:url(image/1.png)"></div>
+                <div class="swiper-slide" style="background-image:url(image/2.png)"></div>
+                <div class="swiper-slide" style="background-image:url(image/3.png)"></div>
+            </div>
+            <!--&lt;!&ndash; Add Arrows &ndash;&gt;-->
+            <!--<div class="swiper-button-next swiper-button-white"></div>-->
+            <!--<div class="swiper-button-prev swiper-button-white"></div>-->
+        </div>
+        <div class="swiper-container gallery-thumbs" dir="rtl">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image:url(image/4.png)"></div>
+                <div class="swiper-slide" style="background-image:url(image/5.png)"></div>
+                <div class="swiper-slide" style="background-image:url(image/6.png)"></div>
+            </div>
+        </div>
+    </div>
+    <div class="case_info">
+        <div class="case_i_title">Leshan Giant Buddha &Mt.Emei 2 Days</div>
+        <div class="case_info_msg">
+            <div class="pro_case_info">
+                <div class="intro box_h clearfix">
+                    <span class="intro_title">Departure</span>
+                    <span class="intro_txt boxflex1">Chengdu</span>
+                </div>
+            </div>
+            <div class="pro_case_info">
+                <div class="intro box_h clearfix">
+                    <span class="intro_title">Journey</span>
+                    <span class="intro_txt boxflex1">Beijin - Chengdu - Leishang - Curabitur - aliquam  - nequeid - consectetur - mattis</span>
+                </div>
+            </div>
+            <div class="pro_case_info">
+                <div class="intro box_h clearfix">
+                    <span class="intro_title">Itinerary</span>
+                    <span class="intro_txt boxflex1">Duis luctus orci vel nulla facilisis eleifend. Etiam tristique ipsum at ultrices pretium. Nam egestas condimentum augue a gravida.</span>
+                </div>
+            </div>
+            <div class="case_i_msg_list box_h">
+                <span>Date</span>
+                <input  type="text" readonly="readonly" class="datepicker boxflex1">
+                <span>to</span>
+                <input  type="text" readonly="readonly" class="datepicker boxflex1">
+            </div>
+            <div class="pro_case_price box_h">
+                <p class="rate">Form USD</p>
+                <p class="price boxflex1">$24.00</p>
+                <a class="btn_price boxflex2">Inquiry</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="blog_main clearfix">
+    <div class="blog_left blog_fix">
+        <h3 class="title">Travel Day</h3>
+        <ul class="blog_ul">
+            <li class="active" title="1">Day1</li>
+            <li title="2">Day2</li>
+            <li title="3">What's Included</li>
+        </ul>
+    </div>
+    <div class="blog_r_box">
+        <div class="blog_r_info" id="index_1">
+            <p class="new_add_title">Day1</p>
+            <p>Duis luctus orci vel nulla facilisis eleifend. Etiam tristique ipsum at ultrices pretium. Nam
+                egestas condimentum augue a gravida. Fusce eleifend non mi quis tempus. Duis mattis congue
+                magna vel dictum. Ut justo nisi, cursus viverra pulvinar quis, auctor sed lacus. Fusce bibendum
+                volutpat ultricies. Suspendisse potenti. Etiam id sem sit amet urna semper bibendum nec at
+                lacus. Aenean in aliquam lectus, at ullamcorper metus. Duis luctus orci vel nulla facilisis
+                eleifend.
+            </p><p>
+            Etiam tristique ipsum at ultrices pretium. Nam egestas condimentum augue a gravida. </p>
+
+            <p>Fusce eleifend non mi quis tempus. </p>
+            <img src="https://unsplash.it/358/240/?random&amp;1" alt="">
+        </div>
+        <div class="blog_r_info" id="index_2">
+            <p class="new_add_title">Day2</p>
+            <p>Duis luctus orci vel nulla facilisis eleifend. Etiam tristique ipsum at ultrices pretium. Nam
+                egestas condimentum augue a gravida. Fusce eleifend non mi quis tempus. Duis mattis congue
+                magna vel dictum. Ut justo nisi, cursus viverra pulvinar quis, auctor sed lacus. Fusce bibendum
+                volutpat ultricies. Suspendisse potenti. Etiam id sem sit amet urna semper bibendum nec at
+                lacus. Aenean in aliquam lectus, at ullamcorper metus. Duis luctus orci vel nulla facilisis
+                eleifend.
+            </p><p>
+            Etiam tristique ipsum at ultrices pretium. Nam egestas condimentum augue a gravida. </p>
+
+            <p>Fusce eleifend non mi quis tempus. </p>
+            <img src="https://unsplash.it/358/240/?random&amp;1" alt="">
+        </div>
+        <div class="blog_r_info" id="index_3">
+            <p class="new_add_title">Day3</p>
+            <p>Duis luctus orci vel nulla facilisis eleifend. Etiam tristique ipsum at ultrices pretium. Nam
+                egestas condimentum augue a gravida. Fusce eleifend non mi quis tempus. Duis mattis congue
+                magna vel dictum. Ut justo nisi, cursus viverra pulvinar quis, auctor sed lacus. Fusce bibendum
+                volutpat ultricies. Suspendisse potenti. Etiam id sem sit amet urna semper bibendum nec at
+                lacus. Aenean in aliquam lectus, at ullamcorper metus. Duis luctus orci vel nulla facilisis
+                eleifend.
+            </p><p>
+            Etiam tristique ipsum at ultrices pretium. Nam egestas condimentum augue a gravida. </p>
+
+            <p>Fusce eleifend non mi quis tempus. </p>
+            <img src="https://unsplash.it/358/240/?random&amp;1" alt="">
+        </div>
+    </div>
+</div>
+<!--footer-->
+<div class="footer">
+    <div class="footer_box">
+        <p class="txt">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+            classical Latin literature from 45 BC, making it over 2000 years old.</p>
+        <div class="footer_list">
+            <div class="footer_li">
+                <h3>Payment</h3>
+                <a href="javascript:;">Creidt Card</a>
+                <a href="javascript:;">Paypal</a>
+                <a href="javascript:;">Wire Transfer </a>
+                <a href="javascript:;">Wechat </a>
+            </div>
+            <div class="footer_li">
+                <h3>Support</h3>
+                <a href="javascript:;">Contct</a>
+                <a href="javascript:;">Faq</a>
+                <a href="javascript:;">Privacy policy </a>
+                <a href="javascript:;">Terms of Use </a>
+            </div>
+            <div class="footer_li">
+                <h3>Be Our Supplier</h3>
+                <a href="javascript:;">Supplier Administration</a>
+                <a class="join_us" href="javascript:;">Join Us</a>
+            </div>
+        </div>
+    </div>
+    <p class="copyright">2017 ©china1stop.com All rights reserved. Version v5.57 川ICP备12003524号 川公网安备11010502023470
+        川ICP证140673号</p>
+</div>
+<script>
+    var galleryTop = new Swiper('.gallery-top', {
+        spaceBetween: 10,
+        initialSlide :0,
+        autoplay: true,
+//        navigation: {
+//            nextEl: '.swiper-button-next',
+//            prevEl: '.swiper-button-prev',
+//        },
+    });
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+        spaceBetween: 10,
+        initialSlide :0,
+        autoplay: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        touchRatio: 0.2,
+        slideToClickedSlide: true,
+    });
+    galleryTop.controller.control = galleryThumbs;
+    galleryThumbs.controller.control = galleryTop;
+
+</script>
+
+</body>
+</html>

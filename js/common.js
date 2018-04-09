@@ -18,4 +18,11 @@ $(function () {
     $('.dropDown_li').on('touchstart',function () {
         $('#dropDown_list').val($(this).text())
     })
+
+    $(".blog_ul li").on('touchstart',function() {
+        $(this).addClass('active').siblings().removeClass('active');
+        var index=this.title;
+        var id='#'+'index_'+index;
+        $("html,body").animate({scrollTop: $(id).offset().top}, 500);
+    });
 })

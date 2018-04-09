@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>忘记密码发送邮件</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <meta http-equiv="x-xss-protection" content="1;mode=block">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/view.min.js"></script>
+    <script>
+        $(function () {
+            $('#next').on('touchstart',function () {
+                var mail=$('.email').val();
+                var reg = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
+//                console.log(mail);
+                if(mail==''){
+                    $('#error_msg').text('E-mail address cannot be empty.');
+                    $('.email_control').css({
+                        'margin-bottom':'.2rem'
+                    });
+                    return false
+                }else if(!reg.test(mail)){
+                   $('#error_msg').text('Email format error!');
+                   $('.email_control').css({
+                       'margin-bottom':'.2rem'
+                   })
+                    return false;
+                }else{
+                    $('#error_msg').text('');
+                    $('.login_email_box').hide();
+                    $('.email_send').show();
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+<div class="login_box">
+    <div class="login">
+        <img src="image/logo.png" alt="">
+    </div>
+    <div class="login_from">
+        <div class="login_email_box">
+            <div class="login_control email_control" style="margin-bottom: .48rem">
+                <input type="text" class="email" placeholder="E-mail">
+                <p id="error_msg" style="color: #FF6C6C;font-size: .24rem"></p>
+            </div>
+            <div class="login_control">
+                <button id="next" class="login_btn" type="button">NEXT</button>
+            </div>
+
+        </div>
+        <div class="email_send" style="display: none">
+            <img src="image/email_send.png" alt="">
+            <p>Please Check your E-MAIL link!</p>
+        </div>
+        <div class="login_control box_h" style="margin-top: 4rem">
+            <a href="" class="boxflex1 account_tips">Already a member?</a>
+            <button type="button" class="btn register_btn">LOG IN</button>
+        </div>
+            <!--<div class="login_control mb">-->
+                <!--<input type="password" class="password" placeholder="Password">-->
+            <!--</div>-->
+            <!--<div class="login_control mb text_right">-->
+                <!--<a class="login_tips" href="javascript:;">Forget your password?</a>-->
+            <!--</div>-->
+
+            <!--<div class="login_control box_h">-->
+                <!--<a href="" class="boxflex1 account_tips">Don’t have an account?</a>-->
+                <!--<button type="button" class="btn register_btn">REGISTER</button>-->
+            <!--</div>-->
+    </div>
+</div>
+</body>
+</html>
