@@ -1,3 +1,6 @@
+body{
+    background: #fff!important;
+}
 .login {
     text-align: center;
 }
@@ -99,6 +102,7 @@
 }
 .common_logo{
     width: 6rem;
+    height: .75rem;
 }
 .common_logo img{
     width: 1.81rem;
@@ -1201,27 +1205,27 @@ p.suc_state{
 }
 .supplier_li .adress {
     background: url(../image/s3.png) no-repeat center 0;
-    background-size: .48rem;
+    background-size: .32rem;
     display: inline-block;
-    width: .48rem;
-    height: .48rem;
+    width: .32rem;
+    height: .32rem;
     /* background-position: 1px -56px; */
     /* padding-top: 40px; */
 }
 .supplier_li .drive {
     background: url(../image/s1.png) no-repeat center 0;
-    background-size: .48rem;
+    background-size: .32rem;
     display: inline-block;
-    width: .48rem;
-    height: .48rem;
+    width: .32rem;
+    height: .32rem;
     padding-top: .15rem;
 }
 .supplier_li .msg {
     background: url(../image/s2.png) no-repeat center 0;
-    background-size: .48rem;
+    background-size: .32rem;
     display: inline-block;
-    width: .48rem;
-    height: .48rem;
+    width: .32rem;
+    height: .32rem;
     padding-top: .15rem;
 }
 .supplier_info_list{
@@ -1252,6 +1256,13 @@ p.suc_state{
     height: .64rem;
     line-height: .64rem;
     padding:0 .2rem;
+}
+.common_menu{
+    background: url(../image/menu.png) no-repeat center;
+    background-size: .32rem;
+    width: 1rem;
+    display: block;
+    height: .75rem;
 }
 .case_i_msg_list span:first-child{
     padding-left: 0;

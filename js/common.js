@@ -25,4 +25,4 @@ $(function () {
         var id='#'+'index_'+index;
         $("html,body").animate({scrollTop: $(id).offset().top}, 500);
     });
-})
+});
