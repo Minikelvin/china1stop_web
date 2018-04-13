@@ -13,122 +13,144 @@
     <meta http-equiv="x-xss-protection" content="1;mode=block">
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="js/calendar/lCalendar.css">
+    <link rel="stylesheet" href="js/menu/menu.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/view.min.js"></script>
 </head>
 <body>
-<!--公用头部-->
-<div class="header ">
-    <div class="header_common box_h">
-        <div class="common_logo">
-            <img src="image/logo.png" alt="">
-        </div>
-        <div class="common_menu boxflex1">
+<div id="page">
+    <!--公用头部-->
+    <div class="header ">
+        <div class="header_common box_h">
+            <div class="common_logo">
+                <img src="image/logo.png" alt="">
+            </div>
+            <a href="#menu" class="common_menu boxflex1"></a>
 
         </div>
     </div>
-</div>
-<!--搜索框-->
-<div class="common_search">
-    <div class="common_search_form">
+    <div class="content">
+        <!--搜索框-->
+        <div class="common_search">
+            <div class="common_search_form">
 
-        <div class="home_select_info clearfix">
-            <div class="home_china1_input box_h">
-                <div class="china1_input_left boxflex1">
-                    <input id="dropDown_list" type="text" name="keyword">
-                    <select name="" id="" class="btn_select">
-                        <option value="">English</option>
-                        <option value="">日本语</option>
-                        <option value="">русский</option>
-                        <option value="">Français</option>
-                    </select>
-                    <span class="caret"></span>
+                <div class="home_select_info clearfix">
+                    <div class="home_china1_input box_h">
+                        <div class="china1_input_left boxflex1">
+                            <input id="dropDown_list" type="text" name="keyword">
+                            <select name="" id="" class="btn_select">
+                                <option value="">English</option>
+                                <option value="">日本语</option>
+                                <option value="">русский</option>
+                                <option value="">Français</option>
+                            </select>
+                            <span class="caret"></span>
+                        </div>
+                        <button class="btn btn_search" type="submit">Search</button>
+                    </div>
+                    <div class="common_creat_btn ">
+                        <button type="button" class="index_creat_btn">Creat My Trip</button>
+                    </div>
                 </div>
-                <button class="btn btn_search" type="submit">Search</button>
-            </div>
-            <div class="common_creat_btn ">
-                <button type="button" class="index_creat_btn">Creat My Trip</button>
             </div>
         </div>
+        <!--content-->
+        <div class="personal_main">
+            <div class="personal_tab">
+                <a href="./viewPersonal.html">My Profiles</a>
+                <a href="./viewPersonalHis.html">My History</a>
+                <a href="./viewPersonalMail.html">My Mail &amp; Deal</a>
+                <a href="javascript:;" class="active">My Blog &amp; View</a>
+            </div>
+            <div class="personal_msg_link">
+                <a href="" class="active">Blog</a>
+                <a href="">View</a>
+            </div>
+            <div class="pro_case_list">
+                <ul>
+                    <li>
+                        <p class="mail_name">
+                            <span class="view_n1 mail_n1">Looking for some one share the car with us to Jiuzhaigou </span>
+                            <span class="mail_n2">2017/3/27</span>
+                        </p>
+                        <p class="mail_info">
+                            hasellus eu risus sapien. Mauris dignissim augue sapien, non pellentesque turpis hendrerit vitae.
+                            Cras in ante ac enim aliquam laoreet. Nam placerat erat magna, ultricies cursus magna vulputate nec
+                        </p>
+                    </li>
+                    <li>
+                        <p class="mail_name">
+                            <span class="view_n1 mail_n1">Looking for some one share the car with us to Jiuzhaigou </span>
+                            <span class="mail_n2">2017/3/27</span>
+                        </p>
+                        <p class="mail_info">
+                            hasellus eu risus sapien. Mauris dignissim augue sapien, non pellentesque turpis hendrerit vitae.
+                            Cras in ante ac enim aliquam laoreet. Nam placerat erat magna, ultricies cursus magna vulputate nec
+                        </p>
+                    </li>
+                    <li>
+                        <p class="mail_name">
+                            <span class="view_n1 mail_n1">Looking for some one share the car with us to Jiuzhaigou </span>
+                            <span class="mail_n2">2017/3/27</span>
+                        </p>
+                        <p class="mail_info">
+                            hasellus eu risus sapien. Mauris dignissim augue sapien, non pellentesque turpis hendrerit vitae.
+                            Cras in ante ac enim aliquam laoreet. Nam placerat erat magna, ultricies cursus magna vulputate nec
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--footer-->
+        <div class="footer">
+            <div class="footer_box">
+                <p class="txt">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                    classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                <div class="footer_list">
+                    <div class="footer_li">
+                        <h3>Payment</h3>
+                        <a href="javascript:;">Creidt Card</a>
+                        <a href="javascript:;">Paypal</a>
+                        <a href="javascript:;">Wire Transfer </a>
+                        <a href="javascript:;">Wechat </a>
+                    </div>
+                    <div class="footer_li">
+                        <h3>Support</h3>
+                        <a href="javascript:;">Contct</a>
+                        <a href="javascript:;">Faq</a>
+                        <a href="javascript:;">Privacy policy </a>
+                        <a href="javascript:;">Terms of Use </a>
+                    </div>
+                    <div class="footer_li">
+                        <h3>Be Our Supplier</h3>
+                        <a href="javascript:;">Supplier Administration</a>
+                        <a class="join_us" href="javascript:;">Join Us</a>
+                    </div>
+                </div>
+            </div>
+            <p class="copyright">2017 ©china1stop.com All rights reserved. Version v5.57 川ICP备12003524号 川公网安备11010502023470
+                川ICP证140673号</p>
+        </div>
     </div>
-</div>
-<!--content-->
-<div class="personal_main">
-    <div class="personal_tab">
-        <a href="./viewPersonal.html">My Profiles</a>
-        <a href="./viewPersonalHis.html">My History</a>
-        <a href="./viewPersonalMail.html">My Mail &amp; Deal</a>
-        <a href="javascript:;" class="active">My Blog &amp; View</a>
-    </div>
-    <div class="personal_msg_link">
-        <a href="" class="active">Blog</a>
-        <a href="">View</a>
-    </div>
-    <div class="pro_case_list">
+    <!--菜单-->
+    <nav id="menu">
         <ul>
-            <li>
-                <p class="mail_name">
-                    <span class="view_n1 mail_n1">Looking for some one share the car with us to Jiuzhaigou </span>
-                    <span class="mail_n2">2017/3/27</span>
-                </p>
-                <p class="mail_info">
-                    hasellus eu risus sapien. Mauris dignissim augue sapien, non pellentesque turpis hendrerit vitae.
-                    Cras in ante ac enim aliquam laoreet. Nam placerat erat magna, ultricies cursus magna vulputate nec
-                </p>
-            </li>
-            <li>
-                <p class="mail_name">
-                    <span class="view_n1 mail_n1">Looking for some one share the car with us to Jiuzhaigou </span>
-                    <span class="mail_n2">2017/3/27</span>
-                </p>
-                <p class="mail_info">
-                    hasellus eu risus sapien. Mauris dignissim augue sapien, non pellentesque turpis hendrerit vitae.
-                    Cras in ante ac enim aliquam laoreet. Nam placerat erat magna, ultricies cursus magna vulputate nec
-                </p>
-            </li>
-            <li>
-                <p class="mail_name">
-                    <span class="view_n1 mail_n1">Looking for some one share the car with us to Jiuzhaigou </span>
-                    <span class="mail_n2">2017/3/27</span>
-                </p>
-                <p class="mail_info">
-                    hasellus eu risus sapien. Mauris dignissim augue sapien, non pellentesque turpis hendrerit vitae.
-                    Cras in ante ac enim aliquam laoreet. Nam placerat erat magna, ultricies cursus magna vulputate nec
-                </p>
-            </li>
+            <li><a href="./viewWho.html" class="who">Who&How</a></li>
+            <li><a href="./viewMap.html" class="city">All City</a></li>
+            <li><a href="./viewBlog.html" class="blog">Blog</a></li>
         </ul>
-    </div>
+    </nav>
 </div>
-<!--footer-->
-<div class="footer">
-    <div class="footer_box">
-        <p class="txt">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-            classical Latin literature from 45 BC, making it over 2000 years old.</p>
-        <div class="footer_list">
-            <div class="footer_li">
-                <h3>Payment</h3>
-                <a href="javascript:;">Creidt Card</a>
-                <a href="javascript:;">Paypal</a>
-                <a href="javascript:;">Wire Transfer </a>
-                <a href="javascript:;">Wechat </a>
-            </div>
-            <div class="footer_li">
-                <h3>Support</h3>
-                <a href="javascript:;">Contct</a>
-                <a href="javascript:;">Faq</a>
-                <a href="javascript:;">Privacy policy </a>
-                <a href="javascript:;">Terms of Use </a>
-            </div>
-            <div class="footer_li">
-                <h3>Be Our Supplier</h3>
-                <a href="javascript:;">Supplier Administration</a>
-                <a class="join_us" href="javascript:;">Join Us</a>
-            </div>
-        </div>
-    </div>
-    <p class="copyright">2017 ©china1stop.com All rights reserved. Version v5.57 川ICP备12003524号 川公网安备11010502023470
-        川ICP证140673号</p>
-</div>
+<script src="js/menu/menu.js"></script>
+<script>
+    jQuery(document).ready(function ($) {
+        $("#menu").mmenu({
+            "extensions": [
+                "position-right",
+            ]
+        });
+    });
+</script>
+
 </body>
 </html>
