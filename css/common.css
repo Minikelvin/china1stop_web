@@ -620,9 +620,30 @@ p.suc_state{
     height: .65rem;
     line-height: .65rem;
 }
+.create_control input[type='submit']
+{
+    background: #FF6C6C;
+    border-radius: 4px;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    height: .96rem;
+    line-height: .22rem;
+    font-size: .32rem;
+    border: none;
+    cursor: pointer;
+}
 .list7 .demo--label{
     display: block;
     width: 100%;
+}
+.login_control textarea{
+    border: 1px solid #D2DADE;
+    box-sizing: border-box;
+    padding:.1rem;
+    width: 100%;
+    resize: none;
+    border-radius: 4px;
 }
 .create_control textarea{
     height: 2.8rem;
@@ -701,6 +722,7 @@ p.suc_state{
 }
 .pro_case_list ul li{
     padding:.1rem .24rem .24rem .24rem;
+    border-bottom: 1px solid #D2DADE;
 }
 .pro_case_list ul li:active{
     background: #F1F5F6;
@@ -1167,6 +1189,7 @@ p.suc_state{
 .blog_r_info img{
     width: 100%;
     height: auto;
+    border-radius: 4px;
 }
 .blog_r_info {
     position: relative;
@@ -1361,4 +1384,19 @@ p.suc_state{
 }
 .supplier_r_ul .blog_r_li_img img{
     margin-right: 0;
+}
+.who_icon{
+    background: url("../image/icon_city.png") no-repeat left center;
+    -webkit-background-size: .32rem;
+    background-size: .32rem;
+}
+.city_icon{
+    background: url("../image/icon_who.png") no-repeat left center;
+    -webkit-background-size: .32rem;
+    background-size: .32rem;
+}
+.blog_icon{
+    background: url("../image/icon_mail.png") no-repeat left center;
+    -webkit-background-size: .32rem;
+    background-size: .32rem;
 }
