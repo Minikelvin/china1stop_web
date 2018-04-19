@@ -23,20 +23,15 @@
         $(function () {
             $('.msg').on('touchstart',function () {
                 var replyMsg=$(this).parent().parent().parent().parent().find('.reply_msg');
-                if(replyMsg.is(':hidden')){
-                    replyMsg.css({'display':'block'})
-                }else{
-                    replyMsg.css({'display':'none'})
-                }
+                if(replyMsg.is(':hidden')){replyMsg.css({'display':'block'})}else{replyMsg.css({'display':'none'})}
             })
             $('.heart').on('touchstart',function () {
-                var that=$(this);
-                // console.log(that);
-                if(that.hasClass('active')){
-                    that.removeClass('active')
-                }else{
-                    that.addClass('active');
-                }
+                var that=$(this);if(that.hasClass('active')){that.removeClass('active')}else{that.addClass('active');}
+            })
+            $('.blog_drop').on('touchstart',function () {
+                var drop_down=$(this).find('.blog_ul');
+                if(drop_down.is(':hidden')){drop_down.stop(true,false).slideDown();
+                }else{drop_down.stop(true,false).slideUp();}
             })
         })
     </script>
@@ -57,7 +52,6 @@
         <!--搜索框-->
         <div class="common_search">
             <div class="common_search_form">
-
                 <div class="home_select_info clearfix">
                     <div class="home_china1_input box_h">
                         <div class="china1_input_left boxflex1">
@@ -80,20 +74,24 @@
         </div>
         <!--content-->
         <div class="blog_left">
-            <h3 class="title">Categories</h3>
-            <ul class="blog_ul">
-                <li class="active"><a href="">Looking for friends</a></li>
-                <li><a href="">On the way</a></li>
-                <li><a href="">More Idea of trip</a></li>
-            </ul>
-            <h3 class="title">Archives</h3>
-            <ul class="blog_ul city_ul">
-                <li class="active"><a href="">Beijing</a></li>
-                <li><a href="">Chengdu</a></li>
-                <li><a href="">Xi'an</a></li>
-                <li><a href="">Guilin</a></li>
-                <li><a href="">Suzhou</a></li>
-            </ul>
+            <div class="blog_drop">
+                <h3 class="title">Categories</h3>
+                <ul class="blog_ul">
+                    <li class="active"><a href="">Looking for friends</a></li>
+                    <li><a href="">On the way</a></li>
+                    <li><a href="">More Idea of trip</a></li>
+                </ul>
+            </div>
+            <div class="blog_drop">
+                <h3 class="title">Archives</h3>
+                <ul class="blog_ul city_ul">
+                    <li class="active"><a href="">Beijing</a></li>
+                    <li><a href="">Chengdu</a></li>
+                    <li><a href="">Xi'an</a></li>
+                    <li><a href="">Guilin</a></li>
+                    <li><a href="">Suzhou</a></li>
+                </ul>
+            </div>
             <a href="" class="add_new_blog">My Blog</a>
             <a href="" class="add_new_post">Post New Topic</a>
         </div>

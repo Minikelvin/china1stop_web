@@ -703,8 +703,9 @@ p.suc_state{
 .list_tab{
     background: #fff;
     /*padding:0 .2rem;*/
-    margin: .24rem;
-    border-bottom: 1px solid #D2DADE;
+    padding: .2rem;
+    box-sizing: border-box;
+    /*border-bottom: 1px solid #D2DADE;*/
 }
 .list_tab a{
     width: 1.2rem;
@@ -859,6 +860,7 @@ p.suc_state{
     color: #fff;
     font-size: .36rem;
     background: #62B1F5;
+    border-bottom:1px solid #fff;
     text-indent: .32rem;
     /*text-indent: 24px;*/
 }
@@ -961,9 +963,17 @@ p.suc_state{
 }
 .blog_item{
     margin-bottom: .2rem;
+    border-bottom:1px solid #eaeaea;
 }
 .reply_msg{
     display: none;
+}
+
+.blog_box_h img{
+    width: 3.2rem;
+    height: 2.04rem;
+    margin-right: .24rem;
+    border-radius: 4px;
 }
 .reply_msg_title {
     display: block;
@@ -1176,15 +1186,83 @@ p.suc_state{
 }
 .blog_ul{
     background: #f8f8f8;
+    display: none;
 }
 .case_main,.blog_r_box{
     padding:.24rem;
+}
+.upload_img{
+    position: relative;
+}
+.upload_img input[type=file]{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    opacity: 0;
+    z-index: 9;
+    height: .64rem;
+}
+.list_screen{
+    /*margin-right: .5rem;*/
+    position: relative;
+}
+.list_screen input{
+    padding:.1rem .05rem;
+    /*border:1px solid #D2DADE;*/
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: block;
+    width: 2.8rem;
 }
 .blog_r_info p {
     margin-bottom: .2rem;
     color: #282c2e;
     font-size: .28rem;
     /*line-height: 20px;*/
+}
+.list_screen_box{
+    border:1px solid #D2DADE;
+    height: .6rem;
+}
+.screen_search{
+    background: url("../image/search.png") no-repeat center;
+    background-size: .32rem;
+    width: .8rem;
+    height: .6rem;
+    color: #fff;
+    font-size: .26rem;
+    padding: 0;
+    border: 0;
+}
+.blog_drop .title{
+    background:#62B1F5 url("../image/title_down.png") no-repeat right center;
+    background-size: .64rem .32rem;
+}
+.case_swiper{
+    font-size: 0;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.case_big_swiper ul li{
+    padding:0;
+}
+.case_swiper ul{
+    white-space: nowrap;
+    margin-bottom: .2rem;
+}
+.case_swiper .am-gallery li{
+    width: 2.71rem;
+    padding:0;
+    position: relative;
+    background-color: #fff;
+    vertical-align: top;
+    display: inline-block;
+    margin-right: .22rem;
+    float: none;
+}
+.case_swiper .am-gallery li img{
+    border-radius: 4px;
 }
 .blog_r_info img{
     width: 100%;

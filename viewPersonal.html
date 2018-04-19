@@ -16,6 +16,25 @@
     <link rel="stylesheet" href="js/menu/menu.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/view.min.js"></script>
+    <script>
+//        点击上传头像
+        $(function () {
+            $('#upload_input').on('change',function(e){
+                var tar = this,
+                    files = tar.files,
+                    fNum = files.length,
+                    URL = window.URL || window.webkitURL;
+                if(!files[0])return;
+                for(var i=0;i<fNum;i++){
+                    if(files[i].type.search(/image/)>=0){
+                        var blob = URL.createObjectURL(files[i]);
+                        $("#upload_img").attr('src', blob);
+                    }
+                }
+                e.stopPropagation();
+            });
+        })
+    </script>
 </head>
 <body>
 <div id="page">
@@ -68,8 +87,11 @@
             </div>
             <div class="personal_head">
                 <p>Hello!<em class="name">Asuvnf Ruhun</em></p>
-                <img src="https://unsplash.it/200/200/?random&amp;1" alt="">
-                <a href="" class="personal_h_btn">Add My Photo</a>
+                <img id="upload_img" src="https://unsplash.it/200/200/?random&amp;1" alt="">
+                <div class="upload_img">
+                    <input type="file" accept="image/*" multiple="multiple" id="upload_input" value="Add My Photo">
+                    <a href="javascript:;" class="personal_h_btn">Add My Photo</a>
+                </div>
                 <a href="" class="add_btn personal_h_btn">Add tags</a>
             </div>
         </div>

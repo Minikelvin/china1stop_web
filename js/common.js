@@ -7,11 +7,11 @@ $(function () {
 
 //    点击展开搜索框
 
-    $('#dropDown_list').focus(function () {
+    $('#dropDown_list,#dropDown_list_screen').focus(function () {
         $('.dropDown_search').show();
         // document.activeElement.blur();
     });
-    $('#dropDown_list').blur(function () {
+    $('#dropDown_list,#dropDown_list_screen').blur(function () {
         $('.dropDown_search').hide();
     });
     //点击搜索框里面的内容。填充到搜索框里面

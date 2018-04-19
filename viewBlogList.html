@@ -20,21 +20,13 @@
         $(function () {
            $('.msg').on('touchstart',function () {
                var replyMsg=$(this).parent().parent().find('.reply_msg');
-               console.log(replyMsg);
-               if(replyMsg.is(':hidden')){
-                   replyMsg.css({'display':'block'})
-               }else{
-                   replyMsg.css({'display':'none'})
-               }
+               if(replyMsg.is(':hidden')){replyMsg.css({'display':'block'})}else{replyMsg.css({'display':'none'})}
            })
             $('.heart').on('touchstart',function () {
-                var that=$(this);
-               // console.log(that);
-                if(that.hasClass('active')){
-                    that.removeClass('active')
-                }else{
-                    that.addClass('active');
-                }
+                var that=$(this);if(that.hasClass('active')){that.removeClass('active')}else{that.addClass('active');}
+            })
+            $('.blog_drop').on('touchstart',function () {
+                var drop_down=$(this).find('.blog_ul');if(drop_down.is(':hidden')){drop_down.stop(true,false).slideDown();}else{drop_down.stop(true,false).slideUp();}
             })
         })
     </script>
@@ -78,22 +70,26 @@
         </div>
         <!--content-->
         <div class="blog_left">
-            <h3 class="title">Categories</h3>
-            <ul class="blog_ul">
-                <li class="active"><a href="">Looking for friends</a></li>
-                <li><a href="">On the way</a></li>
-                <li><a href="">More Idea of trip</a></li>
-            </ul>
-            <h3 class="title">Archives</h3>
-            <ul class="blog_ul city_ul">
-                <li class="active"><a href="">Beijing</a></li>
-                <li><a href="">Chengdu</a></li>
-                <li><a href="">Xi'an</a></li>
-                <li><a href="">Guilin</a></li>
-                <li><a href="">Suzhou</a></li>
-            </ul>
+            <div class="blog_drop">
+                <h3 class="title">Categories</h3>
+                <ul class="blog_ul">
+                    <li class="active"><a href="">Looking for friends</a></li>
+                    <li><a href="">On the way</a></li>
+                    <li><a href="">More Idea of trip</a></li>
+                </ul>
+            </div>
+            <div class="blog_drop">
+                <h3 class="title">Archives</h3>
+                <ul class="blog_ul city_ul">
+                    <li class="active"><a href="">Beijing</a></li>
+                    <li><a href="">Chengdu</a></li>
+                    <li><a href="">Xi'an</a></li>
+                    <li><a href="">Guilin</a></li>
+                    <li><a href="">Suzhou</a></li>
+                </ul>
+            </div>
             <a href="" class="add_new_blog">My Blog</a>
-            <a href="" class="add_new_post">Post New Topic</a>
+            <a href="" class="add_new_post">Post</a>
         </div>
 
         <div class="blog_list">
@@ -103,7 +99,10 @@
                     <span class="name">Dthrsd Gjxb </span>
                     <span class="time">2017/3/27</span>
                 </div>
-                <p class="blog_txt">Looking for some one share the car with us to Jiuzhaigou </p>
+                <div class="box_h blog_box_h">
+                    <img src="https://picsum.photos/320/204/?random&1" alt="">
+                    <p class="blog_txt boxflex1 diandian3">Looking for some one share the car with us to Jiuzhaigou </p>
+                </div>
                 <p class="blog_info">Duis luctus orci vel nulla facilisis eleifend. Etiam tristique ipsum at ultrices pretium. Nam egestas condimentum augue a gravida. Fusce …</p>
                 <div class="blog_message">
                     <a href="javascript:;" class="heart">99</a>
@@ -124,7 +123,10 @@
                     <span class="name">Dthrsd Gjxb </span>
                     <span class="time">2017/3/27</span>
                 </div>
-                <p class="blog_txt">Looking for some one share the car with us to Jiuzhaigou </p>
+                <div class="box_h blog_box_h">
+                    <img src="https://picsum.photos/320/204/?random&1" alt="">
+                    <p class="blog_txt boxflex1 diandian3">Looking for some one share the car with us to Jiuzhaigou </p>
+                </div>
                 <p class="blog_info">Duis luctus orci vel nulla facilisis eleifend. Etiam tristique ipsum at ultrices pretium. Nam egestas condimentum augue a gravida. Fusce …</p>
                 <div class="blog_message">
                     <a href="javascript:;" class="heart">99</a>
@@ -145,7 +147,10 @@
                     <span class="name">Dthrsd Gjxb </span>
                     <span class="time">2017/3/27</span>
                 </div>
-                <p class="blog_txt">Looking for some one share the car with us to Jiuzhaigou </p>
+                <div class="box_h blog_box_h">
+                    <img src="https://picsum.photos/180/180/?random&1" alt="">
+                    <p class="blog_txt boxflex1 diandian3">Looking for some one share the car with us to Jiuzhaigou </p>
+                </div>
                 <p class="blog_info">Duis luctus orci vel nulla facilisis eleifend. Etiam tristique ipsum at ultrices pretium. Nam egestas condimentum augue a gravida. Fusce …</p>
                 <div class="blog_message">
                     <a href="javascript:;" class="heart">99</a>
