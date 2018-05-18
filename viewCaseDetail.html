@@ -29,6 +29,11 @@
                 format: 'yyyy-mm-dd',
                 formatSubmit: 'yyyy-mm-dd'
             });
+            $('.blog_drop').on('touchstart',function () {
+                var drop_down=$(this).find('.blog_ul');
+                if(drop_down.is(':hidden')){drop_down.stop(true,false).slideDown();
+                }else{drop_down.stop(true,false).slideUp();}
+            })
         })
     </script>
 </head>
@@ -151,9 +156,10 @@
                     </div>
                     <div class="pro_case_info">
                         <div class="intro box_h clearfix">
-                            <span class="intro_title">Itinerary</span>
-                            <span class="intro_txt boxflex1">Duis luctus orci vel nulla facilisis eleifend. Etiam tristique ipsum at ultrices pretium. Nam egestas condimentum augue a gravida.</span>
+                            <span class="intro_title">Tag</span>
+                            <span class="intro_txt boxflex1"><b class="tag_type">adasdasd</b><b class="tag_type">Day2</b><b class="tag_type">Type join in</b></span>
                         </div>
+
                     </div>
                     <div class="case_i_msg_list box_h">
                         <span>Date</span>
@@ -170,14 +176,17 @@
 
             </div>
         </div>
+
         <div class="blog_main clearfix">
-            <div class="blog_left blog_fix">
-                <h3 class="title">Travel Day</h3>
-                <ul class="blog_ul">
-                    <li class="active" title="1">Day1</li>
-                    <li title="2">Day2</li>
-                    <li title="3">What's Included</li>
-                </ul>
+            <div class="blog_left blog_fix top fixedsticky ">
+                <div class="blog_drop">
+                    <h3 class="title">Travel Day</h3>
+                    <ul class="blog_ul">
+                        <li class="active" title="1">Day1</li>
+                        <li title="2">Day2</li>
+                        <li title="3">What's Included</li>
+                    </ul>
+                </div>
             </div>
             <div class="blog_r_box">
                 <div class="blog_r_info" id="index_1">
@@ -301,9 +310,12 @@
     <!--菜单-->
     <nav id="menu">
         <ul>
-            <li><a href="./viewWho.html" class="who_icon">Who&How</a></li>
+            <li><a href="./viewWho.html" class="home_icon">home</a></li>
             <li><a href="./viewMap.html" class="city_icon">All City</a></li>
             <li><a href="./viewBlog.html" class="blog_icon">Blog</a></li>
+            <li><a href="./viewQuestion.html" class="question_icon">Add Question</a></li>
+            <li><a href="./viewPersonal.html" class="pro_icon">My Profiles</a></li>
+            <li><a href="javascript:;" class="out_icon">Log Out</a></li>
         </ul>
     </nav>
 </div>
@@ -311,6 +323,7 @@
 
 
 <script src="js/menu/menu.js"></script>
+<script src="js/fixedsticky.js"></script>
 <script>
     jQuery(document).ready(function ($) {
         $("#menu").mmenu({
@@ -318,7 +331,9 @@
                 "position-right",
             ]
         });
+        $( '.top' ).fixedsticky();
     });
+    //$( '.top' ).fixedsticky();
 </script>
 </body>
 </html>

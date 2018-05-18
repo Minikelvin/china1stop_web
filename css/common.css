@@ -435,6 +435,32 @@ p.suc_state{
     padding-top: .4rem;
     /*padding-top: .45rem;*/
 }
+.question_li{
+    background: url(../image/question.png) no-repeat top center;
+    background-size: .36rem;
+    padding-top: .4rem;
+}
+
+.home_icon{
+    background: url(../image/icon_home.png) no-repeat left center;
+    -webkit-background-size: .32rem;
+    background-size: .32rem;
+}
+.question_icon{
+    background: url(../image/icon_q.png) no-repeat left center;
+    -webkit-background-size: .32rem;
+    background-size: .32rem;
+}
+.pro_icon{
+    background: url(../image/icon_person.png) no-repeat left center;
+    -webkit-background-size: .32rem;
+    background-size: .32rem;
+}
+.out_icon{
+    background: url(../image/icon_out.png) no-repeat left center;
+    -webkit-background-size: .32rem;
+    background-size: .32rem;
+}
 .city{
     background: url("../image/allcity.png") no-repeat top center;
     background-size: .24rem;
@@ -638,7 +664,7 @@ p.suc_state{
     width: 100%;
 }
 .login_control textarea{
-    border: 1px solid #D2DADE;
+    border:1px solid #959798;
     box-sizing: border-box;
     padding:.1rem;
     width: 100%;
@@ -674,6 +700,7 @@ p.suc_state{
     height: .8rem;
     line-height: .8rem;
     padding-left: .2rem;
+    position: relative;
 }
 .demo--radio {
     display: none;
@@ -1215,6 +1242,22 @@ p.suc_state{
     display: block;
     width: 2.8rem;
 }
+.case_i_title{
+    font-size: .28rem;
+}
+.tag_type:first-child{
+    padding-left: 0;
+}
+.tag_type{
+    border-right:1px solid #7E8386;
+    padding:0 .2rem;
+    /*font-style: normal;*/
+    font-weight:normal;
+}
+.tag_type:last-child
+{
+    border-right:0;
+}
 .blog_r_info p {
     margin-bottom: .2rem;
     color: #282c2e;
@@ -1477,4 +1520,109 @@ p.suc_state{
     background: url("../image/icon_mail.png") no-repeat left center;
     -webkit-background-size: .32rem;
     background-size: .32rem;
+}
+.question_p{
+   padding:.2rem 0;
+}
+.question_p p{
+    font-size: .28rem;
+    line-height: .5rem;
+    color: #9ea3a7;
+}
+.question_p ul li{
+    line-height: .5rem;
+    color: #9ea3a7;
+    list-style: disc;
+    margin-left: .4rem;
+}
+.top{
+    top: 0;
+    bottom: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: 999;
+    padding-top:0;
+    width: 100%;
+}
+.fixedsticky {
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    position: sticky;
+}
+
+/* When position: sticky is supported but native behavior is ignored */
+.fixedsticky-withoutfixedfixed .fixedsticky-off,
+.fixed-supported .fixedsticky-off {
+    position: static;
+}
+.fixedsticky-withoutfixedfixed .fixedsticky-on,
+.fixed-supported .fixedsticky-on {
+    position: fixed;
+}
+.fixedsticky-dummy {
+    display: none;
+}
+.fixedsticky-on + .fixedsticky-dummy {
+    display: block;
+}
+/*2018-5-18*/
+.create_first:before{
+    content: '';
+    display: block;
+    background-color: #fff;
+    border: 1px solid #D2DADE;
+    border-radius: 100%;
+    height: .3rem;
+    margin-right: .1rem;
+    margin-top: -1px;
+    vertical-align: middle;
+    width: .3rem;
+    line-height: 1;
+    position: absolute;
+    left: 0;
+    top: .2rem;
+}
+.create_first{
+    padding-left: .5rem;
+    display: inline-block;
+    font-size: .3rem;
+    color: #7E8386;
+    width: 2.2rem;
+    height: .8rem;
+    line-height: .8rem;
+    position: relative;
+}
+.edit__people{
+    display: inline-block;
+    font-size: .3rem;
+    color: #7E8386;
+    width: 2.8rem;
+    height: .8rem;
+    line-height: .8rem;
+    position: relative;
+}
+.edit__people input{
+    border: 1px solid #ddd;
+    padding: .1rem .05rem;
+    border-radius: 4px;
+    width: .8rem;
+}
+.create__active:before{
+    content: '';
+    display: block;
+    background-color: #62B1F5;
+     border: 1px solid #62B1F5;
+    border-radius: 100%;
+    height: .3rem;
+    width: .3rem;
+    margin-right: .1rem;
+    margin-top: -1px;
+    vertical-align: middle;
+    line-height: 1;
+    position: absolute;
+    left: 0;
+    top: .2rem;
 }

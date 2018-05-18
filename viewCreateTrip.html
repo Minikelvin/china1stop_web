@@ -27,8 +27,12 @@
                 format: 'yyyy-mm-dd',
                 formatSubmit: 'yyyy-mm-dd'
             });
-            //    右侧菜单弹出
+           //2018-5-18
+            $('.create_first').on('click',function () {
+                $(this).addClass('create__active').siblings().removeClass('create__active');
+//                console.log($(this).data('num')); 获取人数
 
+            })
         })
     </script>
 </head>
@@ -75,22 +79,36 @@
             <div class="create_list">
                 <p>1. Whom are you travelling with? <em>*</em></p>
                 <div class="create_control">
-                    <label for="solo" class="demo--label">
-                        <input class="demo--radio" id="solo" type="radio" name="solo">
-                        <span class="demo--radioInput"></span>Solo
-                    </label>
-                    <label for="two" class="demo--label">
-                        <input class="demo--radio" id="two" type="radio" name="solo">
-                        <span class="demo--radioInput"></span>Two people
-                    </label>
-                    <label for="family" class="demo--label">
-                        <input class="demo--radio" id="family" type="radio" name="solo">
-                        <span class="demo--radioInput"></span>Family
-                    </label>
-                    <label for="group" class="demo--label">
-                        <input class="demo--radio" id="group" type="radio" name="solo">
-                        <span class="demo--radioInput"></span>Group
-                    </label>
+                    <div class="create_first create__active" data-num="1">
+                        <span>Solo</span>
+                    </div>
+                    <div class="create_first" data-num="2">
+                        <span>Two People</span>
+                    </div>
+                    <div class="edit__people">
+                        <span>children</span>
+                        <input id="children_num" type="number" placeholder="1">
+                    </div>
+                    <div class="edit__people">
+                        <span>Adult</span>
+                        <input id="adult_num" type="number" placeholder="2">
+                    </div>
+                    <!--<label for="solo" class="demo&#45;&#45;label">-->
+                        <!--<input class="demo&#45;&#45;radio" id="solo" type="radio" name="solo">-->
+                        <!--<span class="demo&#45;&#45;radioInput"></span>Solo-->
+                    <!--</label>-->
+                    <!--<label for="two" class="demo&#45;&#45;label">-->
+                        <!--<input class="demo&#45;&#45;radio" id="two" type="radio" name="solo">-->
+                        <!--<span class="demo&#45;&#45;radioInput"></span>Two people-->
+                    <!--</label>-->
+                    <!--<label for="family" class="demo&#45;&#45;label">-->
+                        <!--<input class="demo&#45;&#45;radio" id="family" type="radio" name="solo">-->
+                        <!--<span class="demo&#45;&#45;radioInput"></span>Family-->
+                    <!--</label>-->
+                    <!--<label for="group" class="demo&#45;&#45;label">-->
+                        <!--<input class="demo&#45;&#45;radio" id="group" type="radio" name="solo">-->
+                        <!--<span class="demo&#45;&#45;radioInput"></span>Group-->
+                    <!--</label>-->
 
                 </div>
             </div>
@@ -280,9 +298,12 @@
     <!--菜单-->
     <nav id="menu">
         <ul>
-            <li><a href="./viewWho.html" class="who_icon">Who&How</a></li>
+            <li><a href="./viewWho.html" class="home_icon">home</a></li>
             <li><a href="./viewMap.html" class="city_icon">All City</a></li>
             <li><a href="./viewBlog.html" class="blog_icon">Blog</a></li>
+            <li><a href="./viewQuestion.html" class="question_icon">Add Question</a></li>
+            <li><a href="./viewPersonal.html" class="pro_icon">My Profiles</a></li>
+            <li><a href="javascript:;" class="out_icon">Log Out</a></li>
         </ul>
     </nav>
 </div>
